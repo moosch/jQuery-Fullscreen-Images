@@ -18,7 +18,6 @@ function cycle(obj){
 	var currentLi = liContainer.find('[src$="'+currentAttr+'"]').parent();
 	
 	if ( obj == 'left' ){
-		// $('ul#images').find(currentImg).parent().is('li:first-child');
 		if ( currentLi.is(":first-child") ){
 			var previous = $('ul#images li:last-child img');
 		} else {
