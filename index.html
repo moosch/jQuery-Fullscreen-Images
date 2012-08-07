@@ -12,19 +12,21 @@
 	<h1>Fullscreen Images</h1>
 	<div id="wrapper">
 		<ul id="images">
-			<li id="emement"><img class="fullscreen" src="images/blue-banded-morpho-butterfly-top.jpg" alt="" /></li>
-			<li><img class="fullscreen" src="images/red-tailed-hawk-4.jpg" alt="" /></li>
-			<li><img class="fullscreen" src="images/tocllarajumountain.jpg" alt="" /></li>
-			<li><img class="fullscreen" src="images/tree-hugging-baby-tiger.jpg" alt="" /></li>
+			<li><img src="images/blue-banded-morpho-butterfly-top.jpg" alt="" /></li>
+			<li><img src="images/red-tailed-hawk-4.jpg" alt="" /></li>
+			<li><img src="images/tocllarajumountain.jpg" alt="" /></li>
+			<li><img src="images/tree-hugging-baby-tiger.jpg" alt="" /></li>
 		</ul>
 	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
-$('img.fullscreen').on("click", function(){
-	fullScreenFunc(this);
-});
+(function(){
+	$('img').on("click", function(){
+		fullScreenFunc(this);
+	});
+})();
 
 function fullScreenFunc(obj){
 	if (obj.requestFullscreen) {
