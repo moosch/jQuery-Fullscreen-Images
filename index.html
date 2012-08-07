@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Fullscreen Images</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="content">
+	<h1>Fullscreen Images</h1>
+	<div id="wrapper">
+		<ul id="images">
+			<li id="emement"><img class="fullscreen" src="images/blue-banded-morpho-butterfly-top.jpg" alt="" /></li>
+			<li><img class="fullscreen" src="images/red-tailed-hawk-4.jpg" alt="" /></li>
+			<li><img class="fullscreen" src="images/tocllarajumountain.jpg" alt="" /></li>
+			<li><img class="fullscreen" src="images/tree-hugging-baby-tiger.jpg" alt="" /></li>
+		</ul>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$('img.fullscreen').on("click", function(){
+	fullScreenFunc(this);
+});
+
+function fullScreenFunc(obj){
+	if (obj.requestFullscreen) {
+		obj.requestFullscreen();
+	}
+	else if (obj.mozRequestFullScreen) {
+		obj.mozRequestFullScreen();
+	}
+	else if (obj.webkitRequestFullScreen) {
+		obj.webkitRequestFullScreen();
+	}
+}
+</script>
+</body>
+</html>
